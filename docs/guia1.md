@@ -32,6 +32,11 @@ hacer cálculos que involucren repetición. No está permitido usar
 estructuras tipo `for`. Si es necesario ***puede definir nuevas
 funciones auxiliares***.
 
+***Importante 2:*** por defecto en el lenguaje Racket los valores
+son *inmutables*. Esto quiere decir que una vez asociado un valor a un
+identificador, el valor ya no puede cambiar nunca. ***En esta tarea
+debe usar solamente valores inmutables***.
+
 ### Evaluación
 
 La guía será evaluada en dos pasos:
@@ -59,7 +64,13 @@ tiene un valor de 5 puntos. La puntuación será como sigue:
 
 La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60
 puntos. La escala completa a utilizar es [la siguiente](http://escaladenotas.cl/?nmin=1&nmax=7.0&napr=4.0&exig=60.0&pmax=100.0&paso=1.0&orden=ascendente)
-	
+
+### Fecha de Entrega
+
+Fecha de publicación: Jueves 29/09/2016
+Fecha de entrega: TBD
+
+***Entrega por Aula Virtual***
 
 ### Enunciados
 
