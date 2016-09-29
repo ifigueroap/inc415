@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+<h1 id="inc-415---lenguajes-de-programacion">INC 415 - Lenguajes de Programación</h1>
+<h2 id="guia-n1-de-ejercicios-racket">Guía Nº1 de Ejercicios Racket</h2>
+<h3 id="introduccion">Introducción</h3>
+<p>En Racket las funciones se definen utilizando la directiva <code>define</code>.<br />Una función tiene un nombre, un listado de parámetros y un <em>cuerpo</em>.<br />Por ejemplo:</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(double x)
+    (<span class="kw">+</span> x x))</code></pre>
+<p>Define la función <code>double</code> que duplica el valor de su argumento. Otro<br />ejemplo de una función que toma más de un argumento es:</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(maximo a b)
+    (<span class="kw">if</span> (<span class="kw">&gt;</span> a b)
+        a
+        b))</code></pre>
+<p>En esta primera guía se le pide que implemente diversas funciones que<br />trabajan principalmente con números. En cada pregunta se le otorga<br />una <em>definición incompleta</em>, que usted <strong>debe</strong> usar. Es decir, sólo<br />debe cambiar la parte donde dice <code>...</code> y ahí poner su implementación.</p>
+<p><strong><em>Importante:</em></strong> debe utilizar solamente <strong>llamadas recursivas</strong> para<br />hacer cálculos que involucren repetición. No está permitido usar<br />estructuras tipo <code>for</code>. Si es necesario <strong><em>puede definir nuevas<br />funciones auxiliares</em></strong>.</p>
+<h3 id="evaluacion">Evaluación</h3>
+<p>La guía será evaluada en dos pasos:</p>
+<ol>
+<li><p>Ejecución de casos de prueba.<br /><a href="pruebas_guia1.rkt">Descargar casos de prueba</a>.</p></li>
+<li><p>Cada una de las funciones que <strong><em>satisface al menos 1 de sus casos de<br />prueba</em></strong> será revisada manualmente para verificar:</p>
+<ul>
+<li><p>que se implementó &quot;<em>sin trampa</em>&quot;. Por ejemplo, es trampa hacer<br />muchos <code>if</code>, uno para cada caso de prueba, y no realizar realmente<br />el cálculo que se pide.</p></li>
+<li><p>que sigue la <a href="http://docs.racket-lang.org/style/">Guía de Estilo para Racket</a></p></li>
+</ul></li>
+</ol>
+<p>La guía tiene un total de 100 puntos, y cada una de las 20 preguntas<br />tiene un valor de 5 puntos. La puntuación será como sigue:</p>
+<ul>
+<li>Pasa <em>todos</em> los casos de prueba: 3 puntos.
+<ul>
+<li>No hace trampa y sigue guía de estilo: 2 puntos.</li>
+</ul></li>
+<li>Pasa <em>al menos 1</em> de los casos de prueba: 2 puntos.
+<ul>
+<li>No hace trampa y sigue guía de estilo: 1 punto.</li>
+</ul></li>
+</ul>
+<p>La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60<br />puntos. La escala completa a utilizar es <a href="http://escaladenotas.cl/?nmin=1&amp;nmax=7.0&amp;napr=4.0&amp;exig=60.0&amp;pmax=100.0&amp;paso=1.0&amp;orden=ascendente">la siguiente</a></p>
+<h3 id="enunciados">Enunciados</h3>
+<ol>
+<li><p>Implemente la función <code>tres-cuadrados</code>. Esta función toma tres<br />números como argumento y retorna la suma de los cuadrados de los dos<br />números mayores.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(tres-cuadrados a b c) ...)</code></pre></li>
+<li><p>Implemente la función <code>factorial</code>que calcula el factorial de un<br />entero no-negativo <code>n</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(factorial n) ...)</code></pre></li>
+<li><p>Implemente la función <code>fibs</code> que calcula el <code>k</code>-ésimo número de<br />Fibonacci.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(fibs k) ...)</code></pre></li>
+<li><p>Implemente la función <code>potencia</code> que recibe dos números enteros:<br /><code>base</code> y <code>exponente</code>, y calcula la potencia de elevar la base al<br />exponente. Asuma que el exponente es siempre un entero no-negativo.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(potencia base exponente) ...</code></pre></li>
+<li><p>Implemente la función <code>primo?</code>que retorna verdadero <code>#t</code> o falso<br /><code>#f</code> según si el argumento que recibe es o no un número primo.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(primo? n) ...)</code></pre></li>
+<li><p>Implemente la función <code>a-suma-abs-b</code> que suma el valor de <code>a</code> con<br />el valor absoluto de <code>b</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(a-suma-abs-b a b) ...)</code></pre></li>
+<li><p>Implemente la función <code>suma-digitos</code> que suma el valor de los<br />dígitos de un número <code>n</code>dado.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-digitos n) ...)</code></pre></li>
+<li><p>Implemente la función <code>numero-central</code> que dados tres números <code>a</code>,<br /><code>b</code> y <code>c</code>, retorna el que esta al centro, según el orden de los<br />números.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(numero-central a b c) ...)</code></pre></li>
+<li><p>Un número es <em>alternante</em> si su primer dígito es par (impar) y<br />luego el siguiente dígito es impar (par), y así sucesivamente. Esto<br />requiere una cantidad par de dígitos. Implemente la función<br /><code>alternante?</code> que retorna <code>#t</code> o <code>#f</code> según si el número <code>n</code>dado es o<br />no alternante.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(alternante? n) ...)</code></pre></li>
+<li><p>Un número es <em>perfecto</em> si la suma de sus <em>divisores propios</em>, es<br />decir aquellos que no son ni 1 ni el mismo número, es igual al número.<br />Implemente la función <code>perfecto?</code> que retorna <code>#t</code> o <code>#f</code> según si el<br />número <code>n</code> dado es o no perfecto.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(perfecto? n) ...)</code></pre></li>
+<li><p>Un número es <em>agradable</em> si la cantidad de divisores pares es igual<br />a la cantidad de divisores impares. Implemente la función <code>agradable?</code><br />que retorna <code>#t</code> o <code>#f</code> según si el número <code>n</code> dado es o no agradable.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(agradable? n) ...)</code></pre></li>
+<li><p>Implemente la función <code>suma-cuadrados</code> que calcula la suma del<br />cuadrado de los primeros <code>k</code> números naturales.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cuadrados k) ...)</code></pre></li>
+<li><p>Implemente la función <code>suma-cos</code> que calcula la suma del coseno de<br />los primeros <code>k</code>números naturales.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cos k) ...)</code></pre></li>
+<li><p>Implemente la función <code>suma-abstracta</code> que, dada una función <code>f</code><br />que recibe como argumento, calcula la suma de las aplicaciones de <code>f</code><br />a cada uno de los primeros <code>k</code> elementos.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-abstracta f k) ...)</code></pre></li>
+<li><p>Utilizando <code>suma-abstracta</code>, implemente la función<br /><code>suma-cuadrados-abs</code> que hace lo mismo que <code>suma-cuadrados</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cuadrados-abs k)
+    (suma-abstracta ...))</code></pre></li>
+<li><p>Utilizando <code>suma-abstracta</code>, implemente la función<br /><code>suma-cos-abs</code>que hace lo mismo que <code>suma-cuadrados</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cos-abs k)
+    (suma-abstracta ...))</code></pre></li>
+<li><p>Implemente la función <code>suma-abstracta-rango</code> que hace lo mismo que<br /><code>suma-abstracta</code> pero sobre el rango de enteros entre un <code>i</code> y un <code>j</code>,<br />ambos inclusive, dados como parámetros.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-abstracta rango f i j) ...)</code></pre></li>
+<li><p>Utilizando <code>suma-abstracta-rango</code> implemente la función<br /><code>suma-cuadrados-rango</code>que hace lo mismo que <code>suma-cuadrados</code> pero en<br />el rango de enteros entre <code>i</code> y <code>j</code>, <strong>pero sin incluir <code>i</code></strong>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cuadrados-rango i j)
+    (suma-abstracta-rango ...))</code></pre></li>
+<li><p>Utilizando <code>suma-abstracta-rango</code> implemente la función<br /><code>suma-cos-rango</code> que hace lo mismo que <code>suma-cos</code> pero en el rango de<br />enteros entre <code>i</code> y <code>j</code>, <strong>pero sin incluir <code>j</code></strong>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cos-rango i j)
+    (suma-abstracta ...))</code></pre></li>
+<li><p>Implemente la función <code>suma-abstracta-rango-paso</code> que recibe los<br />enteros <code>i</code> y <code>j</code>, pero donde el incremento no se hace 1 a 1 si no que<br />se hace según un parámetro <code>p</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-abstracta-rango-paso f i j p) ...)</code></pre></li>
+</ol>
+</body>
+</html>
