@@ -68,7 +68,7 @@ puntos. La escala completa a utilizar es [la siguiente](http://escaladenotas.cl/
 ### Fecha de Entrega
 
 Fecha de publicación: Jueves 29/09/2016
-Fecha de entrega: TBD
+Fecha de entrega: **Viernes 07/10/2016**
 
 ***Entrega por Aula Virtual***
 
