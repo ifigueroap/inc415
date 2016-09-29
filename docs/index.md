@@ -7,3 +7,4 @@
 ## Referencias
 
 - [PrePLAI](https://users.dcc.uchile.cl/~etanter/preplai/)
+- Clase 29/09 [hola.rkt](Archivos/29-09-hola.rkt)
