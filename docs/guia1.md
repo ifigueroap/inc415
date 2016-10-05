@@ -42,7 +42,7 @@ debe usar solamente valores inmutables***.
 La guía será evaluada en dos pasos:
 
 1. Ejecución de casos de prueba.
-[Descargar casos de prueba](pruebas_guia1.rkt).
+[Descargar plantilla que incluye casos de prueba](plantilla_guia1.rkt).
 
 2. Cada una de las funciones que ***satisface al menos 1 de sus casos de
 prueba*** será revisada manualmente para verificar:
