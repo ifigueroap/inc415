@@ -68,7 +68,7 @@ puntos. La escala completa a utilizar es [la siguiente](http://escaladenotas.cl/
 ### Fecha de Entrega
 
 Fecha de publicación: Jueves 29/09/2016
-Fecha de entrega: **Viernes 07/10/2016**
+Fecha de entrega: **Jueves 13/10/2016**
 
 ***Entrega por Aula Virtual***
 
@@ -104,6 +104,9 @@ exponente. Asuma que el exponente es siempre un entero no-negativo.
 	(define (potencia base exponente) ...
 	```
 
+    ***No puede usar la función `expt`  de Racket***. Debe hacer una
+       multiplicación recursiva.
+
 1. Implemente la función `primo?`que retorna verdadero `#t` o falso
 `#f` según si el argumento que recibe es o no un número primo.
 
@@ -126,8 +129,9 @@ dígitos de un número `n`dado.
 	```
 
 1. Implemente la función `numero-central` que dados tres números `a`,
-`b` y `c`, retorna el que esta al centro, según el orden de los
-números.
+`b` y `c`, retorna el que esta al centro, ***según el orden de los
+números***. Por ejemplo `(numero-central 3 0 5)` debe dar como
+resultado `3`.
 
 	```scheme
 	(define (numero-central a b c) ...)
@@ -167,12 +171,18 @@ cuadrado de los primeros `k` números naturales.
 	(define (suma-cuadrados k) ...)
 	```
 
+    ***No use la fórmula algebráica***. Debe calcular la suma de
+       manera recursiva.
+
 1. Implemente la función `suma-cos` que calcula la suma del coseno de
 los primeros `k`números naturales.
 
 	```scheme
 	(define (suma-cos k) ...)
 	```
+	
+    ***Use la función predefinida `cos` para calcular el coseno de un número.***
+
 
 1. Implemente la función `suma-abstracta` que, dada una función `f`
 que recibe como argumento, calcula la suma de las aplicaciones de `f`

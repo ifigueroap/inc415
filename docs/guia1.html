@@ -64,7 +64,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ul>
 <p>La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60<br />puntos. La escala completa a utilizar es <a href="http://escaladenotas.cl/?nmin=1&amp;nmax=7.0&amp;napr=4.0&amp;exig=60.0&amp;pmax=100.0&amp;paso=1.0&amp;orden=ascendente">la siguiente</a></p>
 <h3 id="fecha-de-entrega">Fecha de Entrega</h3>
-<p>Fecha de publicación: Jueves 29/09/2016<br />Fecha de entrega: <strong>Viernes 07/10/2016</strong></p>
+<p>Fecha de publicación: Jueves 29/09/2016<br />Fecha de entrega: <strong>Jueves 13/10/2016</strong></p>
 <p><strong><em>Entrega por Aula Virtual</em></strong></p>
 <h3 id="enunciados">Enunciados</h3>
 <ol>
@@ -75,14 +75,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><p>Implemente la función <code>fibs</code> que calcula el <code>k</code>-ésimo número de<br />Fibonacci.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(fibs k) ...)</code></pre></li>
 <li><p>Implemente la función <code>potencia</code> que recibe dos números enteros:<br /><code>base</code> y <code>exponente</code>, y calcula la potencia de elevar la base al<br />exponente. Asuma que el exponente es siempre un entero no-negativo.</p>
-<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(potencia base exponente) ...</code></pre></li>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(potencia base exponente) ...</code></pre>
+<p><strong><em>No puede usar la función <code>expt</code> de Racket</em></strong>. Debe hacer una<br /> multiplicación recursiva.</p></li>
 <li><p>Implemente la función <code>primo?</code>que retorna verdadero <code>#t</code> o falso<br /><code>#f</code> según si el argumento que recibe es o no un número primo.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(primo? n) ...)</code></pre></li>
 <li><p>Implemente la función <code>a-suma-abs-b</code> que suma el valor de <code>a</code> con<br />el valor absoluto de <code>b</code>.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(a-suma-abs-b a b) ...)</code></pre></li>
 <li><p>Implemente la función <code>suma-digitos</code> que suma el valor de los<br />dígitos de un número <code>n</code>dado.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-digitos n) ...)</code></pre></li>
-<li><p>Implemente la función <code>numero-central</code> que dados tres números <code>a</code>,<br /><code>b</code> y <code>c</code>, retorna el que esta al centro, según el orden de los<br />números.</p>
+<li><p>Implemente la función <code>numero-central</code> que dados tres números <code>a</code>,<br /><code>b</code> y <code>c</code>, retorna el que esta al centro, <strong><em>según el orden de los<br />números</em></strong>. Por ejemplo <code>(numero-central 3 0 5)</code> debe dar como<br />resultado <code>3</code>.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(numero-central a b c) ...)</code></pre></li>
 <li><p>Un número es <em>alternante</em> si su primer dígito es par (impar) y<br />luego el siguiente dígito es impar (par), y así sucesivamente. Esto<br />requiere una cantidad par de dígitos. Implemente la función<br /><code>alternante?</code> que retorna <code>#t</code> o <code>#f</code> según si el número <code>n</code>dado es o<br />no alternante.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(alternante? n) ...)</code></pre></li>
@@ -91,9 +92,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><p>Un número es <em>agradable</em> si la cantidad de divisores pares es igual<br />a la cantidad de divisores impares. Implemente la función <code>agradable?</code><br />que retorna <code>#t</code> o <code>#f</code> según si el número <code>n</code> dado es o no agradable.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(agradable? n) ...)</code></pre></li>
 <li><p>Implemente la función <code>suma-cuadrados</code> que calcula la suma del<br />cuadrado de los primeros <code>k</code> números naturales.</p>
-<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cuadrados k) ...)</code></pre></li>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cuadrados k) ...)</code></pre>
+<p><strong><em>No use la fórmula algebráica</em></strong>. Debe calcular la suma de<br /> manera recursiva.</p></li>
 <li><p>Implemente la función <code>suma-cos</code> que calcula la suma del coseno de<br />los primeros <code>k</code>números naturales.</p>
-<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cos k) ...)</code></pre></li>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-cos k) ...)</code></pre>
+<p><strong><em>Use la función predefinida <code>cos</code> para calcular el coseno de un número.</em></strong></p></li>
 <li><p>Implemente la función <code>suma-abstracta</code> que, dada una función <code>f</code><br />que recibe como argumento, calcula la suma de las aplicaciones de <code>f</code><br />a cada uno de los primeros <code>k</code> elementos.</p>
 <pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(suma-abstracta f k) ...)</code></pre></li>
 <li><p>Utilizando <code>suma-abstracta</code>, implemente la función<br /><code>suma-cuadrados-abs</code> que hace lo mismo que <code>suma-cuadrados</code>.</p>
