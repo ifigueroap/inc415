@@ -1,5 +1,5 @@
 # 'Makefile'
-MARKDOWN = pandoc --from markdown_github --to html --standalone
+MARKDOWN = pandoc --from markdown_github+footnotes --to html --standalone
 all: $(patsubst %.md,%.html,$(wildcard *.md)) Makefile
 
 clean:
