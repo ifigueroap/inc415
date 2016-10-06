@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+<h1 id="inc-415---lenguajes-de-programacion">INC 415 - Lenguajes de Programación</h1>
+<h2 id="guia-n2-de-ejercicios-racket">Guía Nº2 de Ejercicios Racket</h2>
+<h3 id="introduccion">Introducción</h3>
+<p>En Racket las funciones se definen utilizando la directiva <code>define</code>.<br />Una función tiene un nombre, un listado de parámetros y un <em>cuerpo</em>.<br />Por ejemplo:</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(double x)
+    (<span class="kw">+</span> x x))</code></pre>
+<p>Define la función <code>double</code> que duplica el valor de su argumento. Otro<br />ejemplo de una función que toma más de un argumento es:</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(maximo a b)
+    (<span class="kw">if</span> (<span class="kw">&gt;</span> a b)
+        a
+        b))</code></pre>
+<p>En esta segunda guía se le pide que implemente diversas funciones que<br />trabajan principalmente con <strong><em>pares</em></strong> y con <strong><em>listas</em></strong>. En cada pregunta se le otorga<br />una <em>definición incompleta</em>, que usted <strong>debe</strong> usar. Es decir, sólo<br />debe cambiar la parte donde dice <code>...</code> y ahí poner su implementación.</p>
+<p><strong><em>Importante:</em></strong> debe utilizar solamente <strong>llamadas recursivas</strong> para<br />hacer cálculos que involucren repetición. No está permitido usar<br />estructuras tipo <code>for</code>. Si es necesario <strong><em>puede definir nuevas<br />funciones auxiliares</em></strong>.</p>
+<p><strong><em>Importante 2:</em></strong> por defecto en el lenguaje Racket los valores<br />son <em>inmutables</em>. Esto quiere decir que una vez asociado un valor a un<br />identificador, el valor ya no puede cambiar nunca. <strong><em>En esta tarea<br />debe usar solamente valores inmutables</em></strong>.</p>
+<h3 id="evaluacion">Evaluación</h3>
+<p>La guía será evaluada en dos pasos:</p>
+<ol>
+<li><p>Ejecución de casos de prueba.<br /><a href="plantilla_guia2.rkt">Descargar plantilla que incluye casos de prueba</a>.</p></li>
+<li><p>Cada una de las funciones que <strong><em>satisface al menos 1 de sus casos de<br />prueba</em></strong> será revisada manualmente para verificar:</p>
+<ul>
+<li><p>que se implementó &quot;<em>sin trampa</em>&quot;. Por ejemplo, es trampa hacer<br />muchos <code>if</code>, uno para cada caso de prueba, y no realizar realmente<br />el cálculo que se pide.</p></li>
+<li><p>si existe una función predefinida de Racket que implementa <em>justo</em><br /> lo que se le pide en la pregunta, <strong><em>no debe usarla</em></strong>. Debe<br /> implementar utilizando recursión.</p></li>
+<li><p>no obstante lo anterior, puede usar las funciones predefinidas<br /> si no hacen <em>justo</em> lo que se pide en la pregunta. Por ejemplo,<br /> puede usar <code>append</code> para implementar <code>my-reverse</code>. Pero no puede<br /> usar <code>reverse</code> para implementar <code>my-reverse</code>!</p></li>
+<li><p>que sigue la <a href="http://docs.racket-lang.org/style/">Guía de Estilo para Racket</a></p></li>
+</ul></li>
+</ol>
+<p>La guía tiene un total de 100 puntos, y cada una de las 20 preguntas<br />tiene un valor de 5 puntos. La puntuación será como sigue:</p>
+<ul>
+<li>Pasa <em>todos</em> los casos de prueba: X puntos.
+<ul>
+<li>No hace trampa y sigue guía de estilo: X puntos.</li>
+</ul></li>
+<li>Pasa <em>al menos 1</em> de los casos de prueba: X puntos.
+<ul>
+<li>No hace trampa y sigue guía de estilo: X punto.</li>
+</ul></li>
+</ul>
+<p>La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60<br />puntos. La escala completa a utilizar es<br /><a href="http://escaladenotas.cl/?nmin=1&amp;nmax=7.0&amp;napr=4.0&amp;exig=60.0&amp;pmax=100.0&amp;paso=1.0&amp;orden=ascendente">la siguiente</a></p>
+<h3 id="fecha-de-entrega">Fecha de Entrega</h3>
+<p>Fecha de publicación: XXXX<br />Fecha de entrega: YYYY</p>
+<p><strong><em>Entrega por Aula Virtual</em></strong></p>
+<h3 id="enunciados">Enunciados</h3>
+<ol>
+<li><p>Implemente la función <code>my-member</code> que dada una lista <code>l</code> y un valor<br /> <code>v</code> retorna <code>#t</code> si <code>v</code> está contenido en <code>l</code>, o bien retorna <code>#f</code><br /> en cualquier otro caso.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-member v l) ...)</code></pre>
+<p>En Racket esto <em>se parece</em> a la función <code>member</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>my-length</code> que dada una lista <code>l</code>, retorna<br /> su largo o cantidad de elementos.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-length l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>lenght</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>my-filter</code> que dado un predicado <code>p</code> y una<br /> lista <code>l</code>, retorne una nueva lista que contiene solamente los<br /> elementos de <code>l</code> que cumplen con <code>p</code>---<strong><em>respetando las posiciones<br /> relativas a <code>l</code>.</em></strong></p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-filter p l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>filter</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>my-list-ref</code> que retorna el <code>k</code>-ésimo<br /> elemento de una lista. Si llega al final de la lista porque <code>k</code> es<br /> mayor al largo de la lista, produzca un error de ejecución con la<br /> función predefinida <code>error</code>. Enumere los elementos desde <code>1</code> hasta<br /> el largo de la lista.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-list-ref k l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>list-ref</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>list-max</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorna el mayor elemento de <code>l</code>. Si <code>l</code> es<br /> una lista vacía, señale un <code>error</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-max l) ...)</code></pre></li>
+<li><p>Implemente la función <code>list-min</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorna el menor elemento de <code>l</code>. Si <code>l</code> es<br /> una lista vacía, señale un <code>error</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-min l) ...)</code></pre></li>
+<li><p>Implemente la función <code>my-reverse</code> que dada una lista, retorna una<br /> nueva lista con los elementos en orden inverso.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-reverse l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>reverse</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>my-take</code> que dada una lista <code>l</code> y un entero<br /> no-negativo <code>n</code>, retorne una lista con los primeros <code>n</code> elementos de<br /> <code>l</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-take n l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>take</code>. <strong><em>No puede usarla<br />en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>my-drop</code> que dada una lista <code>l</code> y un entero<br /> <code>n</code>, retorne una lista con todos los elementos de <code>l</code> <strong><em>excepto<br /> los <code>n</code> primeros elementos</em></strong>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-drop n l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>drop</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>rango</code> que dada una lista <code>l</code> y dos enteros <code>a</code> y <code>b</code>,<br /> retorne una lista con los elementos de <code>l</code> entre las posiciiones<br /> <code>a</code> y <code>b</code>, ambas inclusive.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(rango l a b) ...)</code></pre>
+<p><strong><em>Hint:</em></strong> puede usar <code>take</code> y <code>drop</code> para implementar más<br />fácilmente esta función.</p></li>
+<li><p>Implemente la función <code>my-append</code> que dadas dos listas <code>l1</code> y <code>l2</code>,<br /> retorne una lista con la concatenación de ambas. Es decir, una<br /> lista donde primero están todos los elementos de <code>l1</code> y luego todos<br /> los elementos de <code>l2</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-append l1 l2) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>append</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>list-sub</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorne la resta sucesiva de sus elementos.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-sub l) ...)</code></pre></li>
+<li><p>Implemente la función <code>list-add</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorne la suma sucesiva de sus elementos.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-add l) ...)</code></pre></li>
+<li><p>Implemente la función <code>list-mult</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorne el producto de sus elementos.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-mult l) ...)</code></pre></li>
+<li><p>Implemente la función <code>my-fold</code> que generaliza las operaciones de<br /> acumulación de valores sobre una lista. En los casos de prueba se<br /> usará su implementación de <code>my-fold</code> para reimplementar <code>list-sub</code>,<br /> <code>list-add</code> y <code>list-mult</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-fold f l v) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>foldl</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>list-square</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorne una lista con los cuadrados de cada<br /> elemento---<strong><em>respetando el orden original en <code>l</code></em></strong>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-square l) ...)</code></pre></li>
+<li><p>Implemente la función <code>list-halve</code> que dada una lista <code>l</code> que<br /> contiene sólo números, retorne una lista donde los valores fueron<br /> reducidos a la mitad---<strong><em>respetando el orden original en <code>l</code></em></strong>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(list-halve l) ...)</code></pre></li>
+<li><p>Implemente la función <code>my-map</code> que generaliza las operaciones de<br /> transformación de valores de una lista. En los casos de prueba se<br /> usará su implementación de <code>my-map</code> para reimplementar<br /> <code>list-square</code> y <code>list-halve</code>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-map f l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>map</code>. <strong><em>No puede usarla<br />en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>my-flatten</code> que dada una lista <code>l</code>, donde<br /> <code>l</code> puede tener otras listas como elementos, retorne una versión<br /> <em>aplanada</em> con todos los datos en una lista sin ninguna lista<br /> anidada.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(my-flatten l) ...)</code></pre>
+<p>En Racket esto corresponde a la función <code>flatten</code>. <strong><em>No puede<br />usarla en su solución!</em></strong>.</p></li>
+<li><p>Implemente la función <code>deep-reverse</code> que dada una lista <code>l</code>, donde<br /> <code>l</code> puede tener otras listas como elementos, retorne una versión de<br /> <code>l</code> donde los elementos <code>l</code> están <strong><em>recursivamente<br /> reversados</em></strong>.</p>
+<pre class="sourceCode scheme"><code class="sourceCode scheme">(<span class="kw">define</span><span class="fu"> </span>(deep-reverse l) ...)</code></pre>
+<p>Ejemplo: <code>(deep-reverse '(1 (2 3) (4 (5 6) 7) 8))</code> debe dar como<br />resultado: <code>'(8 (7 (6 5) 4) (3 2) 1)</code>.</p></li>
+</ol>
+</body>
+</html>
