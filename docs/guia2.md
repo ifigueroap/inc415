@@ -70,8 +70,8 @@ puntos. La escala completa a utilizar es
 
 ## Fecha de Entrega ##
 
-Fecha de publicación: Martes 17 de Octubre
-Fecha de entrega: **Jueves 26 de Octubre**
+- Fecha de publicación: Martes 17 de Octubre
+- Fecha de entrega: **Jueves 26 de Octubre**
 
 ***Entrega por Aula Virtual***
 
