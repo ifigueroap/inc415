@@ -68,7 +68,7 @@ La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60
 puntos. La escala completa a utilizar es
 [la siguiente](http://escaladenotas.cl/?nmin=1&nmax=7.0&napr=4.0&exig=60.0&pmax=100.0&paso=1.0&orden=ascendente)
 
-## Fecha de Entrega ##
+## Fechas Importantes ##
 
 - Fecha de publicación: Martes 17 de Octubre
 - Fecha de entrega: **Jueves 26 de Octubre**
