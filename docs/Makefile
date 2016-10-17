@@ -1,5 +1,9 @@
 # 'Makefile'
-MARKDOWN = pandoc --from markdown_github+footnotes --to html --standalone
+MARKDOWN = pandoc --from markdown+footnotes --to html --standalone \
+	--template template.html \
+	--css template.css \
+	--self-contained --toc --toc-depth 2 \
+	-V mainlink:index.html
 all: $(patsubst %.md,%.html,$(wildcard *.md)) Makefile
 
 clean:

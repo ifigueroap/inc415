@@ -1,31 +1,24 @@
-# INC 415 - Lenguajes de Programación
-## Guía Nº2 de Ejercicios Racket
+# Guía Nº2 de Ejercicios Racket #
 
-### Introducción
+## Introducción ##
 
-En Racket las funciones se definen utilizando la directiva `define`.
-Una función tiene un nombre, un listado de parámetros y un *cuerpo*.
-Por ejemplo:
 
-```scheme
-(define (double x)
-	(+ x x))
-```
+En Racket las
+[listas](https://users.dcc.uchile.cl/~etanter/preplai/Estructuras_de_Datos.html#%28part._.Listas%29)
+son estructuras de datos inductivas que se construyen mediante la
+concatenación bien formada de pares. En resumen, una lista siempre
+corresponde a uno---y sólo uno---de los siguientes casos:
 
-Define la función `double` que duplica el valor de su argumento. Otro
-ejemplo de una función que toma más de un argumento es:
+- Es una lista vacía `'()`
+- Es una lista no vacía `(cons h t)` donde `h` es un valor arbitrario,
+la cabeza de la lista, y `t`es el resto o *cola* de la lista.
 
-```scheme
-(define (maximo a b)
-	(if (> a b)
-		a
-		b))
-```
 
 En esta segunda guía se le pide que implemente diversas funciones que
-trabajan principalmente con ***pares*** y con ***listas***. En cada pregunta se le otorga
-una *definición incompleta*, que usted **debe** usar. Es decir, sólo
-debe cambiar la parte donde dice `...` y ahí poner su implementación.
+trabajan con ***listas***. En cada
+pregunta se le otorga una *definición incompleta*, que usted **debe**
+usar. Es decir, sólo debe cambiar la parte donde dice `...` y ahí
+poner su implementación.
 
 ***Importante:*** debe utilizar solamente **llamadas recursivas** para
 hacer cálculos que involucren repetición. No está permitido usar
@@ -37,7 +30,7 @@ son *inmutables*. Esto quiere decir que una vez asociado un valor a un
 identificador, el valor ya no puede cambiar nunca. ***En esta tarea
 debe usar solamente valores inmutables***.
 
-### Evaluación
+## Evaluación ##
 
 La guía será evaluada en dos pasos:
 
@@ -65,24 +58,24 @@ prueba*** será revisada manualmente para verificar:
 La guía tiene un total de 100 puntos, y cada una de las 20 preguntas
 tiene un valor de 5 puntos. La puntuación será como sigue:
 
-- Pasa *todos* los casos de prueba: X puntos.
-	- No hace trampa y sigue guía de estilo: X puntos.
+- Pasa *todos* los casos de prueba: 3 puntos.
+	- No hace trampa y sigue guía de estilo: 2 puntos.
 	
-- Pasa *al menos 1* de los casos de prueba: X puntos.
-	- No hace trampa y sigue guía de estilo: X punto.
+- Pasa *al menos 1* de los casos de prueba: 2 puntos.
+	- No hace trampa y sigue guía de estilo: 1 punto.
 
 La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60
 puntos. La escala completa a utilizar es
 [la siguiente](http://escaladenotas.cl/?nmin=1&nmax=7.0&napr=4.0&exig=60.0&pmax=100.0&paso=1.0&orden=ascendente)
 
-### Fecha de Entrega
+## Fecha de Entrega ##
 
-Fecha de publicación: XXXX
-Fecha de entrega: YYYY
+Fecha de publicación: Martes 17 de Octubre
+Fecha de entrega: **Jueves 26 de Octubre**
 
 ***Entrega por Aula Virtual***
 
-### Enunciados
+## Enunciados ##
 
 1. Implemente la función `my-member` que dada una lista `l` y un valor
    `v` retorna `#t` si `v` está contenido en `l`, o bien retorna `#f`
@@ -304,4 +297,5 @@ Fecha de entrega: YYYY
 
 	Ejemplo: `(deep-reverse '(1 (2 3) (4 (5 6) 7) 8))` debe dar como
     resultado: `'(8 (7 (6 5) 4) (3 2) 1)`.
+
 

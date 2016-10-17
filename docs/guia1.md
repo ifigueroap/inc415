@@ -1,7 +1,6 @@
-# INC 415 - Lenguajes de Programación
-## Guía Nº1 de Ejercicios Racket
+# Guía Nº1 de Ejercicios Racket #
 
-### Introducción
+## Introducción ##
 
 En Racket las funciones se definen utilizando la directiva `define`.
 Una función tiene un nombre, un listado de parámetros y un *cuerpo*.
@@ -37,7 +36,7 @@ son *inmutables*. Esto quiere decir que una vez asociado un valor a un
 identificador, el valor ya no puede cambiar nunca. ***En esta tarea
 debe usar solamente valores inmutables***.
 
-### Evaluación
+## Evaluación ##
 
 La guía será evaluada en dos pasos:
 
@@ -65,14 +64,14 @@ tiene un valor de 5 puntos. La puntuación será como sigue:
 La nota mínima 4.0 se obtiene con un 60% de exigencia, es decir 60
 puntos. La escala completa a utilizar es [la siguiente](http://escaladenotas.cl/?nmin=1&nmax=7.0&napr=4.0&exig=60.0&pmax=100.0&paso=1.0&orden=ascendente)
 
-### Fecha de Entrega
+## Fecha de Entrega ##
 
 Fecha de publicación: Jueves 29/09/2016
 Fecha de entrega: **Jueves 13/10/2016**
 
 ***Entrega por Aula Virtual***
 
-### Enunciados
+## Enunciados ##
 
 1.  Implemente la función `tres-cuadrados`. Esta función toma tres
 números como argumento y retorna la suma de los cuadrados de los dos
