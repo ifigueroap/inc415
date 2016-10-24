@@ -16,9 +16,6 @@
 1. [Guía de Ejercicios Racket 1 - Funciones y Recursión](guia1.html)
 1. [Guía de Ejercicios Racket 2 - Pares y Listas](guia2.html)
 
-- [Actividades Formativas](actividades.html)
-
-
 ## Archivos usados en clases
 
 - [Clase 29/09](Archivos/Clase-29-09.rkt)
