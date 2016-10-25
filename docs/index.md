@@ -24,6 +24,7 @@
 - [Clase 19/10](Archivos/Clase-19-10.rkt)
 - [Clase 19/10](Archivos/Clase-19-10-play.rkt)
 - [Clase 20/10](Archivos/Clase-20-10.rkt)
+- [Clase 25/10: Ejercicios lexer](Archivos/ejercicios_lexer.rkt)
 
 ## Referencias
 
