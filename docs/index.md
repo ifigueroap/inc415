@@ -10,6 +10,7 @@
 ### Módulo 2
 
 1. [Análisis Léxico]()
+1. [Ejercicios Análisis Léxico](ejercicios_lexer.html)
 
 ## Actividades Formativas
 
