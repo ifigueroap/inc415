@@ -26,7 +26,7 @@
 - [Clase 20/10](Archivos/Clase-20-10.rkt)
 - [Clase 25/10: Ejercicios lexer](Archivos/Clase-25-10-lexer.rkt)
 
-## Referencias
+<!-- ## Referencias -->
 
 
 
