@@ -2,7 +2,6 @@
 
 ## Introducción ##
 
-
 En Racket las
 [listas](https://users.dcc.uchile.cl/~etanter/preplai/Estructuras_de_Datos.html#%28part._.Listas%29)
 son estructuras de datos inductivas que se construyen mediante la

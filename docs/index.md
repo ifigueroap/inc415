@@ -10,12 +10,12 @@
 ### Módulo 2
 
 1. [Análisis Léxico](analisis_lexico.pdf)
-1. [Ejercicios Análisis Léxico](ejercicios_lexer.html)
 
 ## Actividades Formativas
 
 1. [Guía de Ejercicios Racket 1 - Funciones y Recursión](guia1.html)
 1. [Guía de Ejercicios Racket 2 - Pares y Listas](guia2.html)
+1. [Guía 3 - Análisis Léxico en Racket](guia3.html)
 
 ## Archivos usados en clases
 
@@ -24,7 +24,7 @@
 - [Clase 19/10](Archivos/Clase-19-10.rkt)
 - [Clase 19/10](Archivos/Clase-19-10-play.rkt)
 - [Clase 20/10](Archivos/Clase-20-10.rkt)
-- [Clase 25/10: Ejercicios lexer](Archivos/ejercicios_lexer.rkt)
+- [Clase 25/10: Ejercicios lexer](Archivos/Clase-25-10-lexer.rkt)
 
 ## Referencias
 
