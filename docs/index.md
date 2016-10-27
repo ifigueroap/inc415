@@ -10,7 +10,8 @@
 ### Módulo 2
 
 1. [Análisis Léxico](analisis_lexico.pdf)
-1. [Análisis Sintáctico](https://docs.google.com/presentation/d/1EspxZLAzplhMsRCASMrdGDHyiZcHMgXiPLmqOiYh4Mg/pub?start=false&loop=false&delayms=60000) [Descargar](https://docs.google.com/presentation/d/1EspxZLAzplhMsRCASMrdGDHyiZcHMgXiPLmqOiYh4Mg/export/pptx)
+1. [Análisis Sintáctico](https://docs.google.com/presentation/d/1EspxZLAzplhMsRCASMrdGDHyiZcHMgXiPLmqOiYh4Mg/pub?start=false&loop=false&delayms=60000) -
+   [Descargar](https://docs.google.com/presentation/d/1EspxZLAzplhMsRCASMrdGDHyiZcHMgXiPLmqOiYh4Mg/export/pptx)
 
 ## Actividades Formativas
 
