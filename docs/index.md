@@ -29,7 +29,7 @@
 - [Clase 25/10: Ejercicios lexer](Archivos/Clase-25-10-lexer.rkt)
 - [Clase 8/11: Parte 1](Archivos/Clase-8-11.rkt)
 - [Clase 8/11: Parte 2](Archivos/Clase-8-11-parte 2.rkt)
-
+- [Clase 15/11: Lenguaje WAE - identificadores](Archivos/Clase-15-11.rkt)
 <!-- ## Referencias -->
 
 
